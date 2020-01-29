@@ -1,4 +1,4 @@
-# starbase
+# startbase
 
 > A Vue.js project
 
