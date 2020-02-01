@@ -1,11 +1,14 @@
 <template>
   <div id="app">
       <h3>{{ title }}</h3>
-      <button class="btn btn-primary" @click="fetchCharacter" type="button" name="button">Test Fetch Character</button>
+      <Character />
+      <!-- <button class="btn btn-primary" @click="fetchCharacter" type="button" name="button">Test Fetch Character</button> -->
   </div>
 </template>
 
 <script>
+import Character from './components/character.vue'
+
 export default {
     name: 'app',
     data() {
@@ -13,14 +16,17 @@ export default {
             title: 'Generate Your Team'
         }
     },
-    methods: {
-        fetchCharacter() {
-            fetch('https://cors-anywhere.herokuapp.com/http://swapi.co/api/people',{
-                method: 'GET'
-            })
-            .then(response => response.json())
-            .then(json => console.log(json))
-        }
+    components: {
+        Character
     }
+    // methods: {
+    //     fetchCharacter() {
+    //         fetch('https://cors-anywhere.herokuapp.com/http://swapi.co/api/people/1',{
+    //             method: 'GET'
+    //         })
+    //         .then(response => response.json())
+    //         .then(json => console.log(json))
+    //     }
+    // }
 }
 </script>
