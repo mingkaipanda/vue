@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <h3>Got jokes?</h3>
-        <button class="btn btn-primaty" @click="initJokes">Add Ten Random Jokes</button>
+        <button class="btn btn-primary" @click="initJokes">Add Ten Random Jokes</button>
         <div class="">
             {{ $store.state }}
         </div>
